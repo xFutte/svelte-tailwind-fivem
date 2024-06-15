@@ -1,7 +1,7 @@
 version: 2
 updates:
   - package-ecosystem: "npm"
-    directory: "html/" # Location of the package manifests
+    directory: "svelte-source/" # Location of the package manifests
     schedule:
       interval: "daily"
     commit-message:
