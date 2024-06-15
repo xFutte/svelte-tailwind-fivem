@@ -23,7 +23,7 @@
     "tslib": "^2.6.2",
     "typescript": "^5.2.2",
     "vite": "^5.2.0",
-    "vite-plugin-copy": "^0.1.6",
+    "vite-plugin-javascript-obfuscator": "^3.1.0",
     "vite-plugin-static-copy": "^1.0.5",
     "vite-tsconfig-paths": "^4.3.2"
   }
