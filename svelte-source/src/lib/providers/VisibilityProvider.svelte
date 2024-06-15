@@ -32,7 +32,7 @@
   });
 </script>
 
-<main>
+<main class="h-screen w-full display-none">
   {#if isVisible}
     <slot />
   {/if}
