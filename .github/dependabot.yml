@@ -7,13 +7,11 @@ updates:
     commit-message:
       prefix: "chore(deps)"
     open-pull-requests-limit: 10
-    # Optionally, you can add labels to the PRs created by Dependabot
     labels:
       - "dependencies"
     # Configure the types of updates you want to include
     allow:
       - dependency-type: "all"
-        update-types: ["version-update:semver-minor", "version-update:semver-patch", "security"]
     # Optionally, configure the reviewers for the PRs
     reviewers:
       - "xFutte"
