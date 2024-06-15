@@ -9,3 +9,7 @@ In `svelte-source/src/config.json` you can add configuration for the UI. This fi
 ## Types
 
 TypeScript types for FiveM natives have been made easily available to use. They will be installed when all `node_modules` are installed and can be in-commented in the `tsconfig.json` file.
+
+## Code protection
+
+To make it harder for leakers to make slight changes to your code and sell it, an obfuscator has been added when building the Svelte application. This means that the compiled code in the `html` folder is transformed during the build process to make it difficult to read or understand in addition to being minified.
