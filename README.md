@@ -8,7 +8,16 @@ In `svelte-source/src/config.json` you can add configuration for the UI. This fi
 
 ## Types
 
-TypeScript types for FiveM natives have been made easily available to use. They will be installed when all `node_modules` are installed and can be in-commented in the `tsconfig.json` file.
+TypeScript types for FiveM natives have been made easily available to use. They will be installed when all `node_modules` are installed and can be in-commented in the `tsconfig.json` file:
+
+```json
+"types": [
+    "@citizenfx/server", 
+    "@citizenfx/client"
+]
+```
+
+This will enable suggestions for all natives that can be used in JavaScript. For documentation about the natives, refer to the https://docs.fivem.net/natives/.
 
 ## Code protection
 
