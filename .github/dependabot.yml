@@ -1,44 +1,18 @@
 version: 2
 updates:
-  - package-ecosystem: "npm"
+  - package-ecosystem: "npm" # Specify the package manager you are using
     directory: "svelte-source/" # Location of the package manifests
     schedule:
-      interval: "daily"
+      interval: "daily" # Frequency of updates
     commit-message:
       prefix: "Dependency: "
     open-pull-requests-limit: 10
     labels:
       - "dependencies"
+    # Configure the types of updates you want to include
     allow:
       - dependency-type: "all"
+        update-types: ["version-update:semver-minor"]
+    # Optionally, configure the reviewers for the PRs
     reviewers:
       - "xFutte"
-    ignore:
-      - dependency-name: "*"
-        update-types: ["version-update:semver-major"]
-    groups:
-      # Group for general updates
-      minor-updates:
-        patterns:
-          - "*"
-        update-types: ["minor", "patch"]
-
-  - package-ecosystem: "npm"
-    directory: "svelte-source/"
-    schedule:
-      interval: "daily"
-    commit-message:
-      prefix: "Security: "
-    labels:
-      - "security"
-    allow:
-      - dependency-type: "all"
-    reviewers:
-      - "xFutte"
-    groups:
-      # Group for security updates
-      security-updates:
-        patterns:
-          - "*"
-        update-types: ["major", "minor", "patch"]
-        applies-to: "security-updates"
