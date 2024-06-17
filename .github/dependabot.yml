@@ -7,12 +7,28 @@ updates:
     commit-message:
       prefix: "Dependency: "
     open-pull-requests-limit: 10
-    update-types: ["minor"]
     labels:
       - "dependencies"
-    # Configure the types of updates you want to include
     allow:
       - dependency-type: "all"
-    # Optionally, configure the reviewers for the PRs
+    reviewers:
+      - "xFutte"
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
+
+  - package-ecosystem: "npm"
+    directory: "svelte-source/"
+    schedule:
+      interval: "daily"
+    commit-message:
+      prefix: "Security: "
+    versioning-strategy: "increase"
+    allow:
+      - dependency-type: "direct"
+        update-types: ["version-update:semver-major"]
+    open-pull-requests-limit: 10
+    labels:
+      - "security"
     reviewers:
       - "xFutte"
