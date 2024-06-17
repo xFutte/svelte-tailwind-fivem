@@ -6,7 +6,7 @@ This template for developing FiveM resources should get you easily started with 
 
 In `svelte-source/src/config.json` you can add configuration for the UI. This file will be copied to the `html` folder containing the compiled Svelte code.
 
-## Types
+## Types for FiveM natives
 
 TypeScript types for FiveM natives have been made easily available to use. They will be installed when all `node_modules` are installed and can be in-commented in the `tsconfig.json` file:
 
