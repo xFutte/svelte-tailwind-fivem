@@ -23,11 +23,9 @@ updates:
       interval: "daily"
     commit-message:
       prefix: "Security: "
-    versioning-strategy: "increase"
     allow:
       - dependency-type: "direct"
         update-types: ["version-update:semver-major"]
-    open-pull-requests-limit: 10
     labels:
       - "security"
     reviewers:
