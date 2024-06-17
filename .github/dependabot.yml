@@ -16,6 +16,12 @@ updates:
     ignore:
       - dependency-name: "*"
         update-types: ["version-update:semver-major"]
+    groups:
+      # Group for general updates
+      minor-updates:
+        patterns:
+          - "*"
+        update-types: ["minor", "patch"]
 
   - package-ecosystem: "npm"
     directory: "svelte-source/"
@@ -23,10 +29,16 @@ updates:
       interval: "daily"
     commit-message:
       prefix: "Security: "
-    allow:
-      - dependency-type: "direct"
-        update-types: ["version-update:semver-major"]
     labels:
       - "security"
+    allow:
+      - dependency-type: "all"
     reviewers:
       - "xFutte"
+    groups:
+      # Group for security updates
+      security-updates:
+        patterns:
+          - "*"
+        update-types: ["major", "minor", "patch"]
+        applies-to: "security-updates"
