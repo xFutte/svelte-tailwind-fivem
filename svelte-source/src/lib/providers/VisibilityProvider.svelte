@@ -10,7 +10,7 @@
 
   let isVisible: boolean;
 
-  visibility.subscribe((visible) => {
+  visibility.subscribe((visible: boolean) => {
     isVisible = visible;
   });
 
