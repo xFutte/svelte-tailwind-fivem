@@ -1,6 +1,7 @@
 # Svelte + TailwindCSS + FiveM
 
-This template for developing FiveM resources should get you easily started with developing delightful FiveM resources. It can both work as a template for open-source projects and paid projects. The `fxmanifest.lua` file contains the needed properties for both use cases.
+This template for developing FiveM resources should get you easily started with developing delightful FiveM resources. The dependencies of the template will always be up-to-date to ensure top-notch security. 
+It can work as a template for open-source projects and paid projects. The `fxmanifest.lua` file contains the needed properties for both use cases.
 
 ## Configuration file
 
