@@ -1,5 +1,6 @@
 <script lang="ts">
 	import VisibilityProvider from "$lib/providers/VisibilityProvider.svelte";
+    import { config } from "$lib/stores";
 	import { debugData } from "$utils/debugData";
 	import { isEnvBrowser } from "$utils/misc";
 	import { onMount } from "svelte";
@@ -14,13 +15,12 @@
 		]);
 	}
 
-	export let config = {};
-
 	onMount(async () => {
 		const response = await fetch("config.json");
 
 		await response.json().then((data) => {
-			config = data;
+			// Loads the config file into the config store
+			config.set(data);
 		});
 	});
 </script>
